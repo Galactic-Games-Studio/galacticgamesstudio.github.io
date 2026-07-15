@@ -1,112 +1,206 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>our mini adventure</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="sss/sss.css" type="text/css" media="all">
-	<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-	<meta name="viewport" content="width=device-width, initial-scale=0.65">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-	<script src="sss/sss.min.js"></script>
-	<script src="js/website.js"></script>
-	<script>jQuery(function($) { $('.slider').sss({slideShow : true}); });</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Our Mini Adventure | Magical Walking Simulator</title>
+	<meta name="description" content="Our Mini Adventure is a relaxing fantasy walking simulator about magic, friendship, flight, and finding what has been lost. Wishlist it on Steam.">
+	<meta property="og:title" content="Our Mini Adventure">
+	<meta property="og:description" content="A relaxing fantasy walking simulator full of magic, gentle exploration, friendly characters, and beautiful places to discover.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="images/video-stills/still-sunset-flight.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
-	<div class="parallax bg-clouds bg-centered" data-speed="0.1" data-top="0"></div>
-<!--	<div class="parallax bg-foreground bg-wide not-mobile" data-speed="0.2" data-top="551"></div> -->
-	<div class="parallax bg-trees bg-wide not-mobile" data-speed="0.2" data-top="800"></div>
-	<div class="parallax bg-rocky bg-centered" data-speed="0.5" data-top="360"></div>
-	<div class="parallax bg-title bg-centered" data-speed="0.3" data-top="25"></div>
-	<div class="content" id="content">
-		<div class="purple-panel-foreground parallax" data-speed="-0.15" data-top="0"></div>
-		<img src="images/morwen.png" class="morwen"/>
-		<p class="description">
-			a relaxing walking simulator game
-			<br>
-			use magic to find, that which has been lost
-			<br>
-			<br>
-			click <a href="#wishlist">here</a> then add to your wishlist on Steam
-		</p>
-		<div class="purple-panel">
-			<div class="video-container"><iframe class="video" width="800" height="450" src="https://www.youtube.com/embed/1UINKlqv1TQ?si=FwWhw6TLHOQhtgRq" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+	<header class="site-header">
+		<a class="brand-mark" href="#top" aria-label="Our Mini Adventure home">
+			<img src="images/favicon.png" alt="">
+			<span>Our Mini Adventure</span>
+		</a>
+		<nav class="site-nav" aria-label="Main navigation">
+			<a href="#trailer">Trailer</a>
+			<a href="#features">Features</a>
+			<a href="#gallery">Gallery</a>
+			<a class="nav-cta" href="#wishlist">Wishlist</a>
+		</nav>
+	</header>
 
-			<div class="info">
-				<p class="thin">take a peaceful walk through beautiful landscapes</p>
-				<p class="thin">meet magical people</p>
-				<p class="thin">chat with friendly creatures</p>
-				<p class="thin">acquire new abilities</p>
-				<p class="thin">learn to fly</p>
-				<p class="thin">enjoy your journey through atmospheric settings</p>
-				<p class="thin">find something treasured that has been lost</p>
-			</div>
-
-			<div class="available">
-				coming soon to
-				<br>
-				<a href="https://store.steampowered.com/app/2154200/Our_Mini_Adventure/">nintendo switch</a>
-				<span class="bullet">&#9679;</span>
-				<a href="https://store.steampowered.com/app/2154200/Our_Mini_Adventure/">playstation 4</a>
-				<span class="bullet">&#9679;</span>
-				<a href="https://store.steampowered.com/app/2154200/Our_Mini_Adventure/">xbox one</a>
-				<br>
-				<a href="https://store.steampowered.com/app/2154200/Our_Mini_Adventure/">itch.io</a>
-				<span class="bullet">&#9679;</span>
-				<a href="https://store.steampowered.com/app/2154200/Our_Mini_Adventure/">epic</a>
-				<span class="bullet">&#9679;</span>
-				<a href="https://store.steampowered.com/app/2154200/Our_Mini_Adventure/">steam</a>
-				<span class="bullet">&#9679;</span>
-				<a href="https://store.steampowered.com/app/2154200/Our_Mini_Adventure/">gog</a>
-			</div>
-
-			<a name=#wishlist id="wishlist"></a>
-			<div class="widget">
-<!--				<iframe frameborder="0" src="https://itch.io/embed/932605" width="520" height="167"></iframe> -->
-				<iframe src="https://store.steampowered.com/widget/2154200/" frameborder="0" width="520" height="190"></iframe>
-			</div>
-			
-
-			<!-- <img src="images/divider.png" class="divider"/> -->
-			<img src="images/gif_teleport.gif" class="gif-screenshot"/>
-			<img src="images/gif_flower_field.gif" class="gif-screenshot"/>
-			<img src="images/gif_beach.gif" class="gif-screenshot"/>
-			<img src="images/gif_convo.gif" class="gif-screenshot"/>
-			<img src="images/gif_spell_book.gif" class="gif-screenshot"/>
-			<img src="images/gif_flight.gif" class="gif-screenshot"/>
-
-			<div class="slider screenshot">
-				<img src="images/beach.png" class="slider-screenshot"/>
-				<img src="images/flower_field.png" class="slider-screenshot"/>
-				<img src="images/flying.png" class="slider-screenshot"/>
-				<img src="images/magic_effect.png" class="slider-screenshot"/>
-				<img src="images/magical_friends.png" class="slider-screenshot"/>
-				<img src="images/portal.png" class="slider-screenshot"/>
-				<img src="images/spell_book.png" class="slider-screenshot"/>
-				<img src="images/stream.png" class="slider-screenshot"/>
-				<img src="images/vista.png" class="slider-screenshot"/>
-			</div>
-
-			<div class="info">
-				<div class="credit">
-					created by
-					<br>
-					<a href="https://store.steampowered.com/app/2154200/Our_Mini_Adventure/">galactic games studio</a>
+	<main id="top">
+		<section class="hero" aria-labelledby="hero-title">
+			<div class="hero-sky" aria-hidden="true"></div>
+			<img class="hero-logo" src="images/newlogo.png" alt="Our Mini Adventure">
+			<div class="hero-copy">
+				<p class="eyebrow">A cosy fantasy walking simulator</p>
+				<h1 id="hero-title">Magic, friendship, and our mini adventure.</h1>
+				<p class="hero-text">When you need a break, escape to a different reality - Step into bright handcrafted landscapes, meet magical friends, learn new abilities, and follow a gentle trail in Our Mini Adventure</p>
+				<div class="hero-actions">
+					<a class="button button-primary" href="#wishlist">Wishlist on Steam</a>
+					<a class="button button-secondary" href="#trailer">Watch trailer</a>
 				</div>
-				<div class="credit">
-					original soundtrack by
-					<br>
-					<a href="https://www.fiverr.com/blessed_studio">gita puspita</a>
-				</div>
-				<p class="thin">
-					thank you to my son, for being a brilliant man and for believing in me
-				</p>
-				<p class="thin">
-					<a href="https://store.steampowered.com/app/2154200/Our_Mini_Adventure/">press kit</a>
-				</p>
 			</div>
+			<img class="hero-character" src="images/wizard_girl_closeup.png" alt="A wizard girl from Our Mini Adventure">
+			<div class="hero-hills" aria-hidden="true"></div>
+		</section>
+
+		<section class="quick-pitch" aria-label="Game highlights">
+			<div class="pitch-item" data-reveal>
+				<strong>Explore</strong>
+				<span>Peaceful fields, beaches, forests, mountains, and secret places.</span>
+			</div>
+			<div class="pitch-item" data-reveal>
+				<strong>Use magic</strong>
+				<span>Cast spells, teleport, unlock abilities, and learn to fly.</span>
+			</div>
+			<div class="pitch-item" data-reveal>
+				<strong>Make friends</strong>
+				<span>Meet kind characters and chat with enchanting creatures.</span>
+			</div>
+			<div class="pitch-item" data-reveal>
+				<strong>Relax</strong>
+				<span>A gentle adventure made for wandering, wonder, and discovery.</span>
+			</div>
+		</section>
+
+		<section class="feature-band" id="trailer">
+			<div class="section-heading" data-reveal>
+				<p class="eyebrow">First look</p>
+				<h2>A soft, colourful world made for slowing down.</h2>
+				<p>Our Mini Adventure is about the pleasure of the journey: walking through beautiful landscapes, helping magical friends, and letting curiosity lead the way.</p>
+			</div>
+			<div class="video-frame" data-reveal>
+				<iframe src="https://www.youtube.com/embed/1UINKlqv1TQ?si=FwWhw6TLHOQhtgRq" title="Our Mini Adventure trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+		</section>
+
+		<section class="cinematic" aria-labelledby="cinematic-title">
+			<div class="section-heading" data-reveal>
+				<p class="eyebrow">Fresh from the adventure</p>
+				<h2 id="cinematic-title">A brighter look at the world waiting beyond the portal.</h2>
+			</div>
+			<div class="cinematic-grid">
+				<figure class="cinematic-card cinematic-large" data-reveal>
+					<img src="images/video-stills/still-sunset-flight.jpg" alt="Riding a winged horse beneath glowing sunset clouds">
+					<figcaption>
+						<strong>Take to the sky</strong>
+						<span>Unlock new ways to travel and see the world from above.</span>
+					</figcaption>
+				</figure>
+				<figure class="cinematic-card" data-reveal>
+					<img src="images/video-stills/still-god-rays-forest.jpg" alt="Sunbeams shining through a quiet forest">
+					<figcaption>
+						<strong>Follow the light</strong>
+						<span>Wander through forests, fog, and peaceful hidden paths.</span>
+					</figcaption>
+				</figure>
+				<figure class="cinematic-card" data-reveal>
+					<img src="images/video-stills/still-wildflower-sunset.jpg" alt="Running through wildflowers at sunset">
+					<figcaption>
+						<strong>Find your calm</strong>
+						<span>Soak in gentle spaces made for relaxed discovery.</span>
+					</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<section class="features" id="features" aria-labelledby="features-title">
+			<div class="section-heading" data-reveal>
+				<p class="eyebrow">What you will do</p>
+				<h2 id="features-title">A magical mini adventure, built for feel-good exploration.</h2>
+			</div>
+			<div class="feature-grid">
+				<article class="feature-card" data-reveal>
+					<img src="images/video-stills/still-portal-hills.jpg" alt="A magical stone portal waiting in green hills">
+					<div>
+						<h3>Cast spells to travel</h3>
+						<p>Use magical abilities to teleport, uncover new paths, and move through the world in playful ways.</p>
+					</div>
+				</article>
+				<article class="feature-card" data-reveal>
+					<img src="images/magical_friends.png" alt="A fawn speaking with the player near a cottage">
+					<div>
+						<h3>Meet magical characters</h3>
+						<p>Share small moments with friendly creatures and curious characters who make the world feel alive.</p>
+					</div>
+				</article>
+				<article class="feature-card" data-reveal>
+					<img src="images/video-stills/still-sunset-flight.jpg" alt="Flying on a winged horse at sunset">
+					<div>
+						<h3>Learn to fly</h3>
+						<p>Unlock a new way to experience the landscape and see the adventure from above.</p>
+					</div>
+				</article>
+				<article class="feature-card" data-reveal>
+					<img src="images/video-stills/still-fog-flowers.jpg" alt="A misty flower field leading into a forest">
+					<div>
+						<h3>Find what was lost</h3>
+						<p>Follow a gentle mystery through vibrant places and discover the treasure waiting at the heart of the story.</p>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section class="moments" aria-labelledby="moments-title">
+			<div class="section-heading" data-reveal>
+				<p class="eyebrow">Animated moments</p>
+				<h2 id="moments-title">Tiny glimpses of the journey.</h2>
+			</div>
+			<div class="gif-grid">
+				<img src="images/gif_flower_field.gif" alt="Walking through a flower field" data-reveal>
+				<img src="images/gif_teleport.gif" alt="Casting a teleport spell" data-reveal>
+				<img src="images/gif_convo.gif" alt="Talking with a magical friend" data-reveal>
+				<img src="images/gif_beach.gif" alt="Exploring a bright beach" data-reveal>
+				<img src="images/gif_spell_book.gif" alt="Opening the spell book" data-reveal>
+				<img src="images/gif_flight.gif" alt="Flying over the landscape" data-reveal>
+			</div>
+		</section>
+
+		<section class="gallery" id="gallery" aria-labelledby="gallery-title">
+			<div class="section-heading" data-reveal>
+				<p class="eyebrow">Screenshots</p>
+				<h2 id="gallery-title">Bright places, calm discoveries, and a touch of wonder.</h2>
+			</div>
+			<div class="gallery-grid">
+				<img class="wide" src="images/video-stills/still-sunset-flight.jpg" alt="Riding a winged horse beneath pink sunset clouds" data-reveal>
+				<img src="images/video-stills/still-god-rays-forest.jpg" alt="A character running through a sunlit forest" data-reveal>
+				<img src="images/video-stills/still-portal-hills.jpg" alt="A portal standing in rolling green hills" data-reveal>
+				<img src="images/video-stills/still-flower-meadow.jpg" alt="A character walking through a dense flower meadow" data-reveal>
+				<img src="images/video-stills/still-beach-path.jpg" alt="A sandy beach path with palm trees and water" data-reveal>
+				<img class="wide" src="images/video-stills/still-wildflower-sunset.jpg" alt="A sunset over a field of wildflowers" data-reveal>
+				<img src="images/video-stills/still-distant-hills.jpg" alt="Rolling green hills under soft clouds" data-reveal>
+				<img src="images/video-stills/still-fog-flowers.jpg" alt="A misty field of blue and purple flowers" data-reveal>
+				<img src="images/video-stills/still-cauldron-night.jpg" alt="A glowing cauldron outside a cottage at night" data-reveal>
+				<img class="wide" src="images/video-stills/still-sunset-tower.jpg" alt="A tower and mountains glowing in sunset light" data-reveal>
+			</div>
+		</section>
+
+		<section class="wishlist" id="wishlist" aria-labelledby="wishlist-title">
+			<div class="wishlist-copy" data-reveal>
+				<p class="eyebrow">Coming to Steam</p>
+				<h2 id="wishlist-title">Add Our Mini Adventure to your wishlist.</h2>
+				<p>Wishlisting helps more players discover the game and makes it easier for you to follow updates as launch gets closer.</p>
+				<a class="button button-primary" href="https://store.steampowered.com/app/2154200/Our_Mini_Adventure/" target="_blank" rel="noopener">Open Steam page</a>
+			</div>
+			<div class="steam-widget" data-reveal>
+				<iframe src="https://store.steampowered.com/widget/2154200/" title="Our Mini Adventure Steam widget" frameborder="0"></iframe>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div>
+			<strong>Our Mini Adventure</strong>
+			<span>Created by <a href="https://store.steampowered.com/app/2154200/Our_Mini_Adventure/" target="_blank" rel="noopener">Galactic Games Studio</a></span>
 		</div>
-	</div>
+		<div>
+			<span>Original soundtrack by <a href="https://www.fiverr.com/blessed_studio" target="_blank" rel="noopener">Gita Puspita</a></span>
+			<a href="https://store.steampowered.com/app/2154200/Our_Mini_Adventure/" target="_blank" rel="noopener">Press kit</a>
+		</div>
+	</footer>
+
 </body>
 </html>
