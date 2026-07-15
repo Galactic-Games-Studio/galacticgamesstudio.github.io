@@ -316,6 +316,11 @@ h3 {
 	max-width: 760px;
 	margin: 0 auto 34px;
 	text-align: center;
+	/* soft light halo so headings stay readable over the flower background */
+	text-shadow:
+		0 0 2px rgba(255, 255, 255, 0.95),
+		0 0 8px rgba(255, 255, 255, 0.95),
+		0 0 18px rgba(255, 255, 255, 0.85);
 }
 
 .section-heading p:not(.eyebrow) {
