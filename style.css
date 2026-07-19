@@ -13,6 +13,8 @@
 	--coral: #ff7865;
 	--shadow: 0 22px 70px rgba(21, 44, 55, 0.22);
 	--soft-shadow: 0 16px 35px rgba(26, 68, 79, 0.16);
+	--radius: 18px;
+	--radius-small: 12px;
 }
 
 * {
@@ -28,7 +30,7 @@ body {
 	font-family: "Nunito", Arial, sans-serif;
 	color: var(--ink);
 	background-color: #fbfff0;
-	background-image: url("images/border_flowers_tileable.png");
+	background-image: url("images/border_flowers_tileable.webp");
 	background-size: 100% auto;
 	background-repeat: repeat-y;
 	background-position: center top;
@@ -46,6 +48,17 @@ a {
 	color: inherit;
 	text-decoration-thickness: 2px;
 	text-underline-offset: 0.18em;
+}
+
+a:focus-visible {
+	outline: 3px solid var(--berry);
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+/* Keep anchored sections clear of the sticky header */
+[id] {
+	scroll-margin-top: 90px;
 }
 
 .site-header {
@@ -115,18 +128,22 @@ a {
 	padding: clamp(50px, 7vw, 88px) clamp(20px, 5vw, 72px) clamp(70px, 8vw, 112px);
 	overflow: hidden;
 	background-color: #0b1622;
-	background-image: url("images/hero.png");
+	background-image: url("images/hero.webp");
 	background-size: cover;
 	background-position: center 42%;
 	background-repeat: no-repeat;
 }
 
+/* Soft dark vignette behind the copy so text reads over the bright screenshot */
 .hero::before {
 	content: "";
 	position: absolute;
-	inset: auto 0 0;
-	height: 34%;
-	display: none;
+	inset: 0;
+	z-index: 0;
+	background:
+		radial-gradient(ellipse 62% 54% at 50% 46%, rgba(8, 18, 28, 0.52), rgba(8, 18, 28, 0.2) 58%, transparent 78%),
+		linear-gradient(180deg, rgba(8, 18, 28, 0.3), transparent 24%);
+	pointer-events: none;
 }
 
 .hero::after {
@@ -164,7 +181,7 @@ a {
 	color: var(--berry);
 	font-size: 0.78rem;
 	font-weight: 900;
-	letter-spacing: 0;
+	letter-spacing: 0.12em;
 	text-transform: uppercase;
 }
 
@@ -231,9 +248,31 @@ h3 {
 	box-shadow: 0 20px 38px rgba(35, 64, 71, 0.22);
 }
 
+.button:focus-visible {
+	outline: 3px solid var(--berry);
+	outline-offset: 3px;
+}
+
+.button:active {
+	transform: translateY(0);
+}
+
 .button-primary {
 	color: #3a173b;
 	background: linear-gradient(135deg, #ffe98a, var(--gold) 45%, #ffb85c);
+	box-shadow: 0 12px 28px rgba(255, 171, 64, 0.38);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+	box-shadow: 0 18px 40px rgba(255, 171, 64, 0.48);
+}
+
+/* The wishlist button is the one action that matters most - make it unmissable */
+.hero-actions .button-primary {
+	min-height: 54px;
+	padding: 15px 30px;
+	font-size: 1.08rem;
 }
 
 .button-secondary {
@@ -282,8 +321,22 @@ h3 {
 }
 
 .pitch-item {
-	border-radius: 8px;
+	border-radius: var(--radius-small);
 	padding: 18px;
+}
+
+/* Gentle lift on hover for the cosy cards */
+.pitch-item,
+.feature-card,
+.cinematic-card {
+	transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.pitch-item:hover,
+.feature-card:hover,
+.cinematic-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--shadow);
 }
 
 .pitch-item strong {
@@ -327,7 +380,7 @@ h3 {
 	margin: 18px auto 0;
 	color: var(--ink-soft);
 	font-size: 1.1rem;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .video-frame {
@@ -336,7 +389,7 @@ h3 {
 	margin: 0 auto;
 	overflow: hidden;
 	border: 10px solid #fff9dc;
-	border-radius: 8px;
+	border-radius: var(--radius);
 	background: var(--berry-dark);
 	box-shadow: var(--shadow);
 	aspect-ratio: 16 / 9;
@@ -362,7 +415,7 @@ h3 {
 	margin: 0;
 	overflow: hidden;
 	border: 8px solid rgba(255, 253, 242, 0.94);
-	border-radius: 8px;
+	border-radius: var(--radius);
 	background: var(--berry-dark);
 	box-shadow: var(--shadow);
 }
@@ -411,7 +464,7 @@ h3 {
 	display: grid;
 	grid-template-rows: auto 1fr;
 	overflow: hidden;
-	border-radius: 8px;
+	border-radius: var(--radius);
 }
 
 .feature-card img {
@@ -429,7 +482,7 @@ h3 {
 .wishlist p {
 	margin: 0;
 	color: var(--ink-soft);
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .gif-grid,
@@ -446,7 +499,7 @@ h3 {
 .gallery-grid img {
 	display: block;
 	width: 100%;
-	border-radius: 8px;
+	border-radius: var(--radius-small);
 	object-fit: cover;
 	box-shadow: var(--soft-shadow);
 }
@@ -465,7 +518,7 @@ h3 {
 	min-height: 0;
 	aspect-ratio: 16 / 9;
 	border: 8px solid rgba(255, 253, 242, 0.92);
-	object-fit: contain;
+	object-fit: cover;
 	background: rgba(255, 253, 242, 0.86);
 }
 
@@ -483,14 +536,14 @@ h3 {
 
 .wishlist-copy,
 .steam-widget {
-	border-radius: 8px;
+	border-radius: var(--radius);
 }
 
 .wishlist-copy {
 	padding: clamp(28px, 5vw, 52px);
 	background:
 		linear-gradient(135deg, rgba(255, 253, 242, 0.96), rgba(223, 249, 223, 0.95)),
-		url("images/border_flowers_tileable.png") center / 520px auto;
+		url("images/border_flowers_tileable.webp") center / 520px auto;
 }
 
 .wishlist-copy h2 {
@@ -749,18 +802,19 @@ h3 {
 	}
 }
 
-/* Cinematic gameplay hero - light text over the screenshot backdrop */
+/* Cinematic gameplay hero - light text over the screenshot backdrop.
+   The vignette (.hero::before) does most of the work, so shadows stay light and crisp. */
 .hero .eyebrow {
 	color: #ffe07a;
-	text-shadow: 0 2px 18px rgba(0, 0, 0, 0.88), 0 1px 3px rgba(0, 0, 0, 0.88);
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65), 0 2px 14px rgba(0, 0, 0, 0.45);
 }
 
 .hero-copy h1 {
 	color: #fffaf0;
-	text-shadow: 0 5px 36px rgba(0, 0, 0, 0.92), 0 2px 5px rgba(0, 0, 0, 0.9);
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5), 0 10px 42px rgba(0, 0, 0, 0.45);
 }
 
 .hero .hero-text {
-	color: #f3ece0;
-	text-shadow: 0 4px 26px rgba(0, 0, 0, 0.9), 0 1px 4px rgba(0, 0, 0, 0.86);
+	color: #f6f0e4;
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55), 0 4px 22px rgba(0, 0, 0, 0.4);
 }
