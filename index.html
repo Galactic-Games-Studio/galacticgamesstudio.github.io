@@ -214,8 +214,11 @@
 	<script>
 		// Gentle reveal-on-scroll (progressive enhancement; content shows normally without JS)
 		document.body.classList.add("js-enabled");
+		const revealAll = () => document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("is-visible"));
 		if ("IntersectionObserver" in window) {
+			let observerAlive = false;
 			const observer = new IntersectionObserver((entries) => {
+				observerAlive = true;
 				for (const entry of entries) {
 					if (entry.isIntersecting) {
 						entry.target.classList.add("is-visible");
@@ -224,8 +227,10 @@
 				}
 			}, { threshold: 0.12, rootMargin: "0px 0px -40px" });
 			document.querySelectorAll("[data-reveal]").forEach((el) => observer.observe(el));
+			// Safety net: if the observer never fires (unusual browser states), show everything
+			setTimeout(() => { if (!observerAlive) revealAll(); }, 1600);
 		} else {
-			document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("is-visible"));
+			revealAll();
 		}
 	</script>
 </body>
