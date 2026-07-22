@@ -831,6 +831,19 @@ h3 {
 	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5), 0 10px 42px rgba(0, 0, 0, 0.45);
 }
 
+/* "Magic, friendship, and" is a smaller lead-in above the game's name */
+.hero-copy .lead-in {
+	display: block;
+	font-size: 0.6em;
+	margin-bottom: 0.08em;
+}
+
+/* The game's name is the title - gold accent so it stands out and dominates */
+.hero-copy .game-title {
+	display: block;
+	color: #ffe07a;
+}
+
 .hero .hero-text {
 	color: #f6f0e4;
 	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55), 0 4px 22px rgba(0, 0, 0, 0.4);
