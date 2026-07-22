@@ -123,7 +123,7 @@ a:focus-visible {
 .hero {
 	position: relative;
 	display: grid;
-	place-items: center;
+	place-items: end center;
 	min-height: min(700px, 78svh);
 	padding: clamp(50px, 7vw, 88px) clamp(20px, 5vw, 72px) clamp(70px, 8vw, 112px);
 	overflow: hidden;
@@ -173,7 +173,7 @@ a:focus-visible {
 	z-index: 3;
 	width: min(920px, 100%);
 	text-align: center;
-	margin-top: clamp(28px, 5vw, 58px);
+	margin-top: 0;
 }
 
 .eyebrow {
@@ -196,7 +196,7 @@ h3 {
 h1 {
 	max-width: 980px;
 	margin: 0 auto;
-	font-size: clamp(2.8rem, 6.4vw, 5.6rem);
+	font-size: clamp(2rem, 4vw, 3.4rem);
 	text-wrap: balance;
 	text-shadow: 0 5px 0 rgba(255, 255, 255, 0.75);
 }
