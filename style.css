@@ -128,7 +128,7 @@ a:focus-visible {
 	padding: clamp(50px, 7vw, 88px) clamp(20px, 5vw, 72px) clamp(70px, 8vw, 112px);
 	overflow: hidden;
 	background-color: #0b1622;
-	background-image: url("images/hero.webp");
+	background-image: url("images/hero.webp?v=2");
 	background-size: cover;
 	background-position: center 42%;
 	background-repeat: no-repeat;
