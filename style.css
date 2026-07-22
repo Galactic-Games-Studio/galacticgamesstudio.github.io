@@ -123,7 +123,7 @@ a:focus-visible {
 .hero {
 	position: relative;
 	display: grid;
-	place-items: center;
+	place-items: end center;
 	min-height: min(700px, 78svh);
 	padding: clamp(50px, 7vw, 88px) clamp(20px, 5vw, 72px) clamp(70px, 8vw, 112px);
 	overflow: hidden;
@@ -173,7 +173,7 @@ a:focus-visible {
 	z-index: 3;
 	width: min(920px, 100%);
 	text-align: center;
-	margin-top: clamp(28px, 5vw, 58px);
+	margin-top: 0;
 }
 
 .eyebrow {
@@ -301,6 +301,23 @@ h3 {
 	background: linear-gradient(180deg, transparent, rgba(8, 14, 22, 0.55));
 }
 
+/* Eyebrow, intro paragraph and buttons now sit below the hero image */
+.hero-intro {
+	width: min(760px, calc(100% - 40px));
+	margin: 0 auto;
+	padding: clamp(26px, 4vw, 44px) 0 0;
+	text-align: center;
+}
+
+/* soft light halo so this text reads over the flower background */
+.hero-intro .eyebrow,
+.hero-intro .hero-text {
+	text-shadow:
+		0 0 2px rgba(255, 255, 255, 0.95),
+		0 0 8px rgba(255, 255, 255, 0.92),
+		0 0 18px rgba(255, 255, 255, 0.82);
+}
+
 .quick-pitch {
 	position: relative;
 	z-index: 5;
@@ -308,7 +325,7 @@ h3 {
 	grid-template-columns: repeat(4, 1fr);
 	gap: 16px;
 	width: min(1180px, calc(100% - 40px));
-	margin: -42px auto 0;
+	margin: clamp(52px, 7vw, 84px) auto 0;
 }
 
 .pitch-item,
@@ -633,9 +650,9 @@ h3 {
 	}
 
 	.hero {
-		min-height: auto;
+		min-height: min(70svh, 560px);
 		padding-top: 46px;
-		padding-bottom: 176px;
+		padding-bottom: clamp(28px, 6vw, 48px);
 	}
 
 	.hero-logo {
@@ -706,7 +723,7 @@ h3 {
 	.hero {
 		padding-inline: 18px;
 		padding-top: 28px;
-		padding-bottom: 102px;
+		padding-bottom: 24px;
 	}
 
 	.hero-logo {
@@ -767,7 +784,7 @@ h3 {
 	}
 
 	.quick-pitch {
-		margin-top: -34px;
+		margin-top: 24px;
 	}
 
 	.video-frame {
