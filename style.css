@@ -125,7 +125,7 @@ a:focus-visible {
 	display: grid;
 	place-items: end center;
 	min-height: calc(100svh - 62px);
-	padding: clamp(50px, 7vw, 88px) clamp(20px, 5vw, 72px) clamp(70px, 8vw, 112px);
+	padding: clamp(50px, 7vw, 88px) clamp(20px, 5vw, 72px) clamp(32px, 4vw, 56px);
 	overflow: hidden;
 	background-color: #0b1622;
 	background-image: url("images/hero.webp?v=2");
@@ -650,7 +650,7 @@ h3 {
 	}
 
 	.hero {
-		min-height: min(70svh, 560px);
+		min-height: min(56svh, 440px);
 		padding-top: 46px;
 		padding-bottom: clamp(28px, 6vw, 48px);
 	}
