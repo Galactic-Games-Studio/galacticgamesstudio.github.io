@@ -125,7 +125,7 @@ a:focus-visible {
 	display: grid;
 	place-items: end center;
 	min-height: min(700px, 78svh);
-	padding: clamp(50px, 7vw, 88px) clamp(20px, 5vw, 72px) clamp(70px, 8vw, 112px);
+	padding: clamp(50px, 7vw, 88px) clamp(20px, 5vw, 72px) clamp(30px, 4vw, 50px);
 	overflow: hidden;
 	background-color: #0b1622;
 	background-image: url("images/hero.webp?v=2");
@@ -176,6 +176,21 @@ a:focus-visible {
 	margin-top: 0;
 }
 
+.hero-intro {
+	width: min(760px, calc(100% - 40px));
+	margin: clamp(26px, 4vw, 42px) auto 0;
+	text-align: center;
+	/* soft halo so the dark intro text stays readable over the flower background */
+	text-shadow:
+		0 0 2px rgba(255, 255, 255, 0.95),
+		0 0 8px rgba(255, 255, 255, 0.95),
+		0 0 18px rgba(255, 255, 255, 0.85);
+}
+
+.hero-intro .button {
+	text-shadow: none;
+}
+
 .eyebrow {
 	margin: 0 0 10px;
 	color: var(--berry);
@@ -196,7 +211,7 @@ h3 {
 h1 {
 	max-width: 980px;
 	margin: 0 auto;
-	font-size: clamp(2rem, 4vw, 3.4rem);
+	font-size: clamp(2.8rem, 6.4vw, 5.6rem);
 	text-wrap: balance;
 	text-shadow: 0 5px 0 rgba(255, 255, 255, 0.75);
 }
@@ -308,7 +323,7 @@ h3 {
 	grid-template-columns: repeat(4, 1fr);
 	gap: 16px;
 	width: min(1180px, calc(100% - 40px));
-	margin: -42px auto 0;
+	margin: clamp(44px, 6vw, 72px) auto 0;
 }
 
 .pitch-item,
@@ -633,9 +648,8 @@ h3 {
 	}
 
 	.hero {
-		min-height: auto;
 		padding-top: 46px;
-		padding-bottom: 176px;
+		padding-bottom: clamp(28px, 5vw, 48px);
 	}
 
 	.hero-logo {
@@ -706,7 +720,7 @@ h3 {
 	.hero {
 		padding-inline: 18px;
 		padding-top: 28px;
-		padding-bottom: 102px;
+		padding-bottom: clamp(22px, 7vw, 36px);
 	}
 
 	.hero-logo {
@@ -767,7 +781,7 @@ h3 {
 	}
 
 	.quick-pitch {
-		margin-top: -34px;
+		margin-top: 32px;
 	}
 
 	.video-frame {
@@ -809,7 +823,10 @@ h3 {
 	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65), 0 2px 14px rgba(0, 0, 0, 0.45);
 }
 
-.hero-copy h1 {
+.hero h1 {
+	position: relative;
+	z-index: 3;
+	text-align: center;
 	color: #fffaf0;
 	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5), 0 10px 42px rgba(0, 0, 0, 0.45);
 }
