@@ -311,24 +311,11 @@ h3 {
 
 /* soft light halo so this text reads over the flower background */
 .hero-intro .eyebrow,
-.hero-intro .hero-text,
-.hero-intro .hero-list {
+.hero-intro .hero-text {
 	text-shadow:
 		0 0 2px rgba(255, 255, 255, 0.95),
 		0 0 8px rgba(255, 255, 255, 0.92),
 		0 0 18px rgba(255, 255, 255, 0.82);
-}
-
-.hero-list {
-	max-width: 720px;
-	margin: 10px auto 0;
-	padding: 0;
-	list-style: none;
-	color: #214350;
-	font-size: clamp(1.04rem, 1.7vw, 1.32rem);
-	font-weight: 700;
-	line-height: 1.6;
-	text-wrap: balance;
 }
 
 .quick-pitch {
@@ -748,8 +735,7 @@ h3 {
 		font-size: clamp(2.1rem, 10.2vw, 2.8rem);
 	}
 
-	.hero-text,
-	.hero-list {
+	.hero-text {
 		font-size: 0.96rem;
 		line-height: 1.45;
 	}
