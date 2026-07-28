@@ -365,7 +365,7 @@ h3 {
 	grid-template-columns: repeat(4, 1fr);
 	gap: 16px;
 	width: min(1180px, calc(100% - 40px));
-	margin: clamp(52px, 7vw, 84px) auto 0;
+	margin: clamp(24px, 3.2vw, 40px) auto 0;
 }
 
 .pitch-item,
@@ -433,9 +433,9 @@ h3 {
 	padding: clamp(76px, 10vw, 128px) 0 0;
 }
 
-/* the wishlist panels sit straight under the intro line, no gap */
+/* a little breathing room between the trailer and the wishlist panels */
 .wishlist {
-	padding-top: 0;
+	padding-top: clamp(30px, 4.5vw, 56px);
 }
 
 /* these headings lost their eyebrow lines, so close up the gap above them */
