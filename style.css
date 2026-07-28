@@ -638,7 +638,7 @@ h3 {
 
 .wishlist {
 	display: grid;
-	grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
+	grid-template-columns: 1fr;
 	gap: 24px;
 	align-items: stretch;
 	padding-bottom: clamp(76px, 10vw, 128px);
@@ -771,10 +771,6 @@ h3 {
 	.feature-grid,
 	.gif-grid,
 	.gallery-grid,
-	.wishlist {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
 	.cinematic-large {
 		grid-column: span 2;
 		grid-row: auto;
