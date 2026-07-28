@@ -11,6 +11,9 @@
 	--berry-dark: #49135f;
 	--gold: #ffd665;
 	--coral: #ff7865;
+	/* warm dark shadow that lifts cards off the flower background */
+	--card-shadow: 0 3px 6px rgba(28, 18, 6, 0.28), 0 12px 26px rgba(28, 18, 6, 0.34);
+	--card-shadow-hover: 0 5px 10px rgba(28, 18, 6, 0.3), 0 22px 42px rgba(28, 18, 6, 0.4);
 	--shadow: 0 22px 70px rgba(21, 44, 55, 0.22);
 	--soft-shadow: 0 16px 35px rgba(26, 68, 79, 0.16);
 	--radius: 18px;
@@ -379,6 +382,11 @@ h3 {
 	padding: 18px;
 }
 
+.pitch-item,
+.feature-card {
+	box-shadow: var(--card-shadow);
+}
+
 /* Gentle lift on hover for the cosy cards */
 .pitch-item,
 .feature-card,
@@ -386,11 +394,15 @@ h3 {
 	transition: transform 260ms ease, box-shadow 260ms ease;
 }
 
-.pitch-item:hover,
-.feature-card:hover,
 .cinematic-card:hover {
 	transform: translateY(-4px);
 	box-shadow: var(--shadow);
+}
+
+.pitch-item:hover,
+.feature-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--card-shadow-hover);
 }
 
 .pitch-item strong {
