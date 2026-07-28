@@ -422,6 +422,18 @@ h3 {
 	font-weight: 600;
 }
 
+/* gold display copy — needs a dark contour instead of the white halo,
+   otherwise pale gold disappears against the light flower background */
+.hero-intro .eyebrow,
+#trailer .section-heading h2,
+#cinematic-title {
+	color: var(--gold);
+	text-shadow:
+		0 1px 1px rgba(52, 28, 4, 0.9),
+		0 2px 6px rgba(52, 28, 4, 0.6),
+		0 4px 18px rgba(52, 28, 4, 0.45);
+}
+
 .video-frame {
 	position: relative;
 	width: min(960px, 100%);
