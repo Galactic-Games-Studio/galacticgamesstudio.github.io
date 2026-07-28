@@ -143,6 +143,26 @@ a:focus-visible {
 	animation-play-state: paused;
 }
 
+/* the wishlist buttons pulse like the nav CTA */
+@keyframes cta-pulse {
+	0%, 100% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.05);
+	}
+}
+
+.wishlist-copy .button {
+	animation: cta-pulse 2.4s ease-in-out infinite;
+}
+
+.wishlist-copy .button:hover,
+.wishlist-copy .button:focus-visible {
+	animation-play-state: paused;
+}
+
 .hero {
 	position: relative;
 	display: grid;
