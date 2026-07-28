@@ -421,7 +421,8 @@ h3 {
 
 /* these headings lost their eyebrow lines, so close up the gap above them */
 #trailer,
-.cinematic {
+.cinematic,
+.features {
 	padding-top: clamp(20px, 3vw, 36px);
 }
 
