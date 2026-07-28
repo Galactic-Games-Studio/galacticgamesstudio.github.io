@@ -329,7 +329,7 @@ h3 {
 .hero-intro {
 	width: min(760px, calc(100% - 40px));
 	margin: 0 auto;
-	padding: 0;
+	padding: clamp(26px, 4vw, 44px) 0 0;
 	text-align: center;
 }
 
@@ -431,6 +431,11 @@ h3 {
 	width: min(1180px, calc(100% - 40px));
 	margin: 0 auto;
 	padding: clamp(76px, 10vw, 128px) 0 0;
+}
+
+/* the wishlist panels sit straight under the intro line, no gap */
+.wishlist {
+	padding-top: 0;
 }
 
 /* these headings lost their eyebrow lines, so close up the gap above them */
