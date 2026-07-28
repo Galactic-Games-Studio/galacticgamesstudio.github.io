@@ -329,7 +329,7 @@ h3 {
 .hero-intro {
 	width: min(760px, calc(100% - 40px));
 	margin: 0 auto;
-	padding: clamp(26px, 4vw, 44px) 0 0;
+	padding: 0;
 	text-align: center;
 }
 
