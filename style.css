@@ -618,6 +618,11 @@ h3 {
 	align-items: start;
 }
 
+/* breathing room under the last gallery image, before the footer */
+.gallery {
+	padding-bottom: clamp(44px, 6vw, 88px);
+}
+
 .gallery-grid img {
 	height: auto;
 	min-height: 0;
