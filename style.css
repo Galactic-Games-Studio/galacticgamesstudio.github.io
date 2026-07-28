@@ -383,7 +383,9 @@ h3 {
 }
 
 .pitch-item,
-.feature-card {
+.feature-card,
+.wishlist-copy,
+.steam-widget {
 	box-shadow: var(--card-shadow);
 }
 
