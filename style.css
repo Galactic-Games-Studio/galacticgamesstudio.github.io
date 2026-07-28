@@ -457,7 +457,8 @@ h3 {
    otherwise pale gold disappears against the light flower background */
 .hero-intro .eyebrow,
 #trailer .section-heading h2,
-#cinematic-title {
+#cinematic-title,
+#features-title {
 	color: var(--gold);
 	text-shadow:
 		0 1px 1px rgba(52, 28, 4, 0.9),
