@@ -319,14 +319,14 @@ h3 {
 		0 0 18px rgba(255, 255, 255, 0.82);
 }
 
-/* the tagline is now the only copy in this band, so let it carry the section */
+/* this band's line is the big display heading */
 .hero-intro .eyebrow {
 	margin: 0;
-	font-family: "Baloo 2", "Nunito", Arial, sans-serif;
-	font-size: clamp(1.7rem, 4.6vw, 3rem);
-	font-weight: 600;
-	letter-spacing: 0.01em;
-	line-height: 1.2;
+	font-family: "Almendra", Georgia, serif;
+	font-size: clamp(2.25rem, 5vw, 4.4rem);
+	font-weight: 700;
+	letter-spacing: normal;
+	line-height: 1.05;
 	text-transform: none;
 	text-wrap: balance;
 	text-shadow:
@@ -421,6 +421,16 @@ h3 {
 	color: var(--ink-soft);
 	font-size: 1.1rem;
 	font-weight: 600;
+}
+
+/* the trailer heading is the small rounded tagline */
+#trailer .section-heading h2 {
+	font-family: "Baloo 2", "Nunito", Arial, sans-serif;
+	font-size: clamp(1.7rem, 4.6vw, 3rem);
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	line-height: 1.2;
+	text-wrap: balance;
 }
 
 /* gold display copy — needs a dark contour instead of the white halo,
