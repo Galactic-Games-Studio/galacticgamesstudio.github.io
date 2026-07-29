@@ -596,6 +596,44 @@ h3 {
 	font-weight: 800;
 }
 
+/* a captioned image inside the screenshot grid, styled like the cinematic cards */
+.gallery-card {
+	position: relative;
+	margin: 0;
+	overflow: hidden;
+	border-radius: var(--radius-small);
+	background: var(--berry-dark);
+	box-shadow: var(--soft-shadow);
+}
+
+.gallery-card img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.gallery-card figcaption {
+	position: absolute;
+	inset: auto 0 0;
+	display: grid;
+	gap: 4px;
+	padding: 42px 24px 22px;
+	color: #ffffff;
+	background: linear-gradient(180deg, transparent, rgba(16, 42, 53, 0.88));
+}
+
+.gallery-card strong {
+	font-family: "Almendra", Georgia, serif;
+	font-size: clamp(1.55rem, 3vw, 2.3rem);
+	line-height: 1.05;
+}
+
+.gallery-card span {
+	max-width: 38rem;
+	font-weight: 800;
+}
+
 .feature-grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
