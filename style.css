@@ -125,16 +125,22 @@ a:focus-visible {
 	animation: nav-cta-pulse 2.4s ease-in-out infinite;
 }
 
-/* gentle pulse so the wishlist action keeps catching the eye */
+/* Gentle pulse so the wishlist action keeps catching the eye.
+   Glow only, no scaling: a scaled pill widens the nav's scrollable area
+   and makes a horizontal scrollbar flicker in and out under the menu. */
 @keyframes nav-cta-pulse {
 	0%, 100% {
-		transform: scale(1);
-		box-shadow: 0 2px 5px rgba(28, 18, 6, 0.3), 0 8px 18px rgba(28, 18, 6, 0.34);
+		box-shadow:
+			0 2px 5px rgba(28, 18, 6, 0.3),
+			0 8px 18px rgba(28, 18, 6, 0.34),
+			0 0 0 0 rgba(255, 193, 64, 0);
 	}
 
 	50% {
-		transform: scale(1.06);
-		box-shadow: 0 3px 8px rgba(28, 18, 6, 0.34), 0 12px 26px rgba(255, 171, 64, 0.55);
+		box-shadow:
+			0 2px 6px rgba(28, 18, 6, 0.34),
+			0 10px 22px rgba(28, 18, 6, 0.38),
+			0 0 16px 4px rgba(255, 193, 64, 0.6);
 	}
 }
 
