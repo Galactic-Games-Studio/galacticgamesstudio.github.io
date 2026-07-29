@@ -104,6 +104,16 @@ a:focus-visible {
 	font-size: 0.9rem;
 	font-weight: 800;
 	color: var(--ink-soft);
+	/* the pulsing pill briefly widens the scroll area on small screens;
+	   keep it swipeable but never show a flickering scrollbar */
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.site-nav::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	display: none;
 }
 
 .site-nav a {
@@ -122,25 +132,26 @@ a:focus-visible {
 	padding: 8px 14px;
 	white-space: nowrap;
 	box-shadow: 0 2px 5px rgba(28, 18, 6, 0.3), 0 8px 18px rgba(28, 18, 6, 0.34);
-	animation: nav-cta-pulse 2.4s ease-in-out infinite;
+	animation: nav-cta-pulse 3.2s ease-in-out infinite;
 }
 
-/* Gentle pulse so the wishlist action keeps catching the eye.
-   Glow only, no scaling: a scaled pill widens the nav's scrollable area
-   and makes a horizontal scrollbar flicker in and out under the menu. */
+/* Gentle breathe + glow so the wishlist action keeps catching the eye.
+   Held at rest for most of the cycle so it reads as a heartbeat, not a wobble. */
 @keyframes nav-cta-pulse {
-	0%, 100% {
+	0%, 55%, 100% {
+		transform: scale(1);
 		box-shadow:
 			0 2px 5px rgba(28, 18, 6, 0.3),
 			0 8px 18px rgba(28, 18, 6, 0.34),
 			0 0 0 0 rgba(255, 193, 64, 0);
 	}
 
-	50% {
+	72% {
+		transform: scale(1.055);
 		box-shadow:
-			0 2px 6px rgba(28, 18, 6, 0.34),
-			0 10px 22px rgba(28, 18, 6, 0.38),
-			0 0 16px 4px rgba(255, 193, 64, 0.6);
+			0 3px 7px rgba(28, 18, 6, 0.34),
+			0 12px 24px rgba(28, 18, 6, 0.38),
+			0 0 18px 5px rgba(255, 193, 64, 0.6);
 	}
 }
 
@@ -151,17 +162,17 @@ a:focus-visible {
 
 /* the wishlist buttons pulse like the nav CTA */
 @keyframes cta-pulse {
-	0%, 100% {
+	0%, 55%, 100% {
 		transform: scale(1);
 	}
 
-	50% {
-		transform: scale(1.05);
+	72% {
+		transform: scale(1.045);
 	}
 }
 
 .wishlist-copy .button {
-	animation: cta-pulse 2.4s ease-in-out infinite;
+	animation: cta-pulse 3.2s ease-in-out infinite;
 }
 
 .wishlist-copy .button:hover,
