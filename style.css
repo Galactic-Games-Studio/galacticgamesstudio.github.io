@@ -220,29 +220,12 @@ a:focus-visible {
 	display: none;
 }
 
-.hero-logo {
-	position: absolute;
-	top: clamp(22px, 4vw, 44px);
-	left: clamp(20px, 5vw, 70px);
-	width: clamp(130px, 14vw, 220px);
-	filter: drop-shadow(0 16px 22px rgba(13, 67, 78, 0.2));
-}
-
 .hero-copy {
 	position: relative;
 	z-index: 3;
 	width: min(920px, 100%);
 	text-align: center;
 	margin-top: 0;
-}
-
-.eyebrow {
-	margin: 0 0 10px;
-	color: var(--berry);
-	font-size: 0.78rem;
-	font-weight: 900;
-	letter-spacing: 0.12em;
-	text-transform: uppercase;
 }
 
 h1,
@@ -270,23 +253,6 @@ h2 {
 h3 {
 	margin: 0 0 8px;
 	font-size: clamp(1.45rem, 2.6vw, 2rem);
-}
-
-.hero-text {
-	max-width: 720px;
-	margin: 18px auto 0;
-	color: #214350;
-	font-size: clamp(1.04rem, 1.7vw, 1.32rem);
-	font-weight: 700;
-	text-wrap: balance;
-}
-
-.hero-actions {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 14px;
-	margin-top: 30px;
 }
 
 .button {
@@ -329,29 +295,6 @@ h3 {
 	box-shadow: 0 4px 8px rgba(28, 18, 6, 0.36), 0 18px 36px rgba(28, 18, 6, 0.46);
 }
 
-/* The wishlist button is the one action that matters most - make it unmissable */
-.hero-actions .button-primary {
-	min-height: 54px;
-	padding: 15px 30px;
-	font-size: 1.08rem;
-}
-
-.button-secondary {
-	color: #ffffff;
-	background: linear-gradient(135deg, var(--teal), var(--berry));
-}
-
-.hero-character {
-	display: block;
-	position: absolute;
-	z-index: 2;
-	right: clamp(-72px, 1vw, 18px);
-	bottom: clamp(-34px, -1vw, 0px);
-	width: clamp(230px, 25vw, 380px);
-	filter: drop-shadow(0 26px 28px rgba(20, 53, 64, 0.34));
-	pointer-events: none;
-}
-
 .hero-hills {
 	position: absolute;
 	z-index: 1;
@@ -362,72 +305,20 @@ h3 {
 	background: linear-gradient(180deg, transparent, rgba(8, 14, 22, 0.55));
 }
 
-/* Eyebrow, intro paragraph and buttons now sit below the hero image */
-.hero-intro {
-	width: min(760px, calc(100% - 40px));
-	margin: 0 auto;
-	padding: clamp(26px, 4vw, 44px) 0 0;
-	text-align: center;
-}
-
-/* soft light halo so this text reads over the flower background */
-.hero-intro .eyebrow,
-.hero-intro .hero-text {
-	text-shadow:
-		0 0 2px rgba(255, 255, 255, 0.95),
-		0 0 8px rgba(255, 255, 255, 0.92),
-		0 0 18px rgba(255, 255, 255, 0.82);
-}
-
-/* this band's line is the big display heading */
-.hero-intro .eyebrow {
-	margin: 0;
-	font-family: "Almendra", Georgia, serif;
-	font-size: clamp(2.25rem, 5vw, 4.4rem);
-	font-weight: 700;
-	letter-spacing: normal;
-	line-height: 1.05;
-	text-transform: none;
-	text-wrap: balance;
-	text-shadow:
-		0 0 3px rgba(255, 255, 255, 0.98),
-		0 0 12px rgba(255, 255, 255, 0.95),
-		0 0 28px rgba(255, 255, 255, 0.85);
-}
-
-.quick-pitch {
-	position: relative;
-	z-index: 5;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 16px;
-	width: min(1180px, calc(100% - 40px));
-	margin: clamp(24px, 3.2vw, 40px) auto 0;
-}
-
-.pitch-item,
 .feature-card,
-.steam-widget,
 .wishlist-copy {
 	border: 1px solid rgba(31, 140, 96, 0.18);
 	background: rgba(255, 253, 242, 0.9);
 	box-shadow: var(--soft-shadow);
 }
 
-.pitch-item {
-	border-radius: var(--radius-small);
-	padding: 18px;
-}
-
-.pitch-item,
 .feature-card,
-.wishlist-copy,
-.steam-widget {
+.wishlist-copy{
 	box-shadow: var(--card-shadow);
 }
 
 /* Gentle lift on hover for the cosy cards */
-.pitch-item,
+
 .feature-card,
 .cinematic-card {
 	transition: transform 260ms ease, box-shadow 260ms ease;
@@ -438,31 +329,14 @@ h3 {
 	box-shadow: var(--shadow);
 }
 
-.pitch-item:hover,
 .feature-card:hover {
 	transform: translateY(-4px);
 	box-shadow: var(--card-shadow-hover);
 }
 
-.pitch-item strong {
-	display: block;
-	color: var(--berry-dark);
-	font-family: "Almendra", Georgia, serif;
-	font-size: 1.55rem;
-	line-height: 1.1;
-}
-
-.pitch-item span {
-	display: block;
-	margin-top: 6px;
-	color: var(--ink-soft);
-	font-size: 0.95rem;
-}
-
 .feature-band,
 .cinematic,
 .features,
-.moments,
 .gallery,
 .wishlist {
 	width: min(1180px, calc(100% - 40px));
@@ -494,13 +368,6 @@ h3 {
 		0 0 18px rgba(255, 255, 255, 0.85);
 }
 
-.section-heading p:not(.eyebrow) {
-	margin: 18px auto 0;
-	color: var(--ink-soft);
-	font-size: 1.1rem;
-	font-weight: 600;
-}
-
 /* the trailer heading is the small rounded tagline */
 #trailer .section-heading h2 {
 	font-family: "Baloo 2", "Nunito", Arial, sans-serif;
@@ -513,7 +380,7 @@ h3 {
 
 /* gold display copy — needs a dark contour instead of the white halo,
    otherwise pale gold disappears against the light flower background */
-.hero-intro .eyebrow,
+
 #trailer .section-heading h2,
 #cinematic-title,
 #features-title,
@@ -671,27 +538,17 @@ h3 {
 	font-weight: 600;
 }
 
-.gif-grid,
 .gallery-grid {
 	display: grid;
 	gap: 16px;
 }
 
-.gif-grid {
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.gif-grid img,
 .gallery-grid img {
 	display: block;
 	width: 100%;
 	border-radius: var(--radius-small);
 	object-fit: cover;
 	box-shadow: var(--soft-shadow);
-}
-
-.gif-grid img {
-	aspect-ratio: 16 / 9;
 }
 
 .gallery-grid {
@@ -725,8 +582,7 @@ h3 {
 	padding-bottom: clamp(76px, 10vw, 128px);
 }
 
-.wishlist-copy,
-.steam-widget {
+.wishlist-copy{
 	border-radius: var(--radius);
 }
 
@@ -743,22 +599,6 @@ h3 {
 
 .wishlist-copy .button {
 	margin-top: 24px;
-}
-
-.steam-widget {
-	display: grid;
-	place-items: center;
-	min-height: 300px;
-	padding: 24px;
-	background:
-		linear-gradient(160deg, rgba(73, 19, 95, 0.94), rgba(15, 146, 170, 0.9)),
-		url("images/clouds.png") center / cover no-repeat;
-}
-
-.steam-widget iframe {
-	width: min(100%, 646px);
-	height: 190px;
-	border: 0;
 }
 
 .site-footer {
@@ -828,29 +668,13 @@ h3 {
 		padding-bottom: clamp(28px, 6vw, 48px);
 	}
 
-	.hero-logo {
-		position: relative;
-		top: auto;
-		left: auto;
-		width: min(230px, 56vw);
-		margin-bottom: 16px;
-	}
-
 	.hero-copy {
 		margin-top: 0;
 	}
 
-	.hero-character {
-		right: -34px;
-		bottom: -12px;
-		width: min(330px, 76vw);
-		transform: none;
-	}
-
-	.quick-pitch,
+	
 	.cinematic-grid,
 	.feature-grid,
-	.gif-grid,
 	.gallery-grid,
 	.cinematic-large {
 		grid-column: span 2;
@@ -905,23 +729,8 @@ h3 {
 		padding-bottom: 24px;
 	}
 
-	.hero-logo {
-		width: min(180px, 48vw);
-		margin-bottom: 12px;
-	}
-
 	h1 {
 		font-size: clamp(2.1rem, 10.2vw, 2.8rem);
-	}
-
-	.hero-text {
-		font-size: 0.96rem;
-		line-height: 1.45;
-	}
-
-	.hero-actions {
-		gap: 12px;
-		margin-top: 22px;
 	}
 
 	.button {
@@ -929,41 +738,21 @@ h3 {
 		padding: 11px 18px;
 	}
 
-	.hero-character {
-		right: -54px;
-		bottom: -14px;
-		width: min(250px, 74vw);
-		transform: none;
-	}
-
-	.hero-actions {
-		align-items: stretch;
-		flex-direction: column;
-		width: min(100%, 310px);
-		margin-inline: auto;
-	}
-
-	.quick-pitch,
+	
 	.cinematic-grid,
 	.feature-grid,
-	.gif-grid,
 	.gallery-grid,
 	.wishlist {
 		grid-template-columns: 1fr;
 	}
 
-	.quick-pitch,
+	
 	.feature-band,
 	.cinematic,
 	.features,
-	.moments,
 	.gallery,
 	.wishlist {
 		width: min(100% - 28px, 1180px);
-	}
-
-	.quick-pitch {
-		margin-top: 24px;
 	}
 
 	.cinematic-card,
@@ -983,22 +772,6 @@ h3 {
 		min-height: 0;
 		aspect-ratio: 16 / 9;
 	}
-
-	.steam-widget {
-		min-height: 252px;
-		padding: 14px;
-	}
-
-	.steam-widget iframe {
-		height: 190px;
-	}
-}
-
-/* Cinematic gameplay hero - light text over the screenshot backdrop.
-   The vignette (.hero::before) does most of the work, so shadows stay light and crisp. */
-.hero .eyebrow {
-	color: #ffe07a;
-	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65), 0 2px 14px rgba(0, 0, 0, 0.45);
 }
 
 .hero-copy h1 {
@@ -1017,9 +790,4 @@ h3 {
 .hero-copy .game-title {
 	display: block;
 	color: #ffe07a;
-}
-
-.hero .hero-text {
-	color: #f6f0e4;
-	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55), 0 4px 22px rgba(0, 0, 0, 0.4);
 }
