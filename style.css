@@ -567,6 +567,12 @@ h3 {
 	min-height: 548px;
 }
 
+/* full-width cinematic banner across the bottom of the scenes grid */
+.cinematic-wide {
+	grid-column: 1 / -1;
+	min-height: clamp(300px, 32vw, 440px);
+}
+
 .cinematic-card img {
 	display: block;
 	width: 100%;
