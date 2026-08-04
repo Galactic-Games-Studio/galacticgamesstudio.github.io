@@ -368,6 +368,29 @@ h3 {
 		0 0 18px rgba(255, 255, 255, 0.85);
 }
 
+/* lead paragraph under a section heading */
+.section-heading .lede {
+	max-width: 640px;
+	margin: 18px auto 0;
+	color: var(--ink);
+	font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+	font-weight: 700;
+	line-height: 1.55;
+}
+
+/* tongue-in-cheek fine print */
+.section-heading .disclaimer {
+	max-width: 600px;
+	margin: 16px auto 0;
+	color: var(--ink-soft);
+	font-size: 0.82rem;
+	font-style: italic;
+	font-weight: 600;
+	line-height: 1.5;
+	opacity: 0.9;
+	text-shadow: 0 0 2px rgba(255, 255, 255, 0.9), 0 0 6px rgba(255, 255, 255, 0.75);
+}
+
 /* the trailer heading is the small rounded tagline */
 #trailer .section-heading h2 {
 	font-family: "Baloo 2", "Nunito", Arial, sans-serif;
