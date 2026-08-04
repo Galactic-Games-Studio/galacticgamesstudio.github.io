@@ -368,10 +368,22 @@ h3 {
 		0 0 18px rgba(255, 255, 255, 0.85);
 }
 
+/* description card under a section heading — a solid panel keeps the copy
+   readable over the busy flower background, especially on mobile */
+.section-heading .intro-card {
+	max-width: 640px;
+	margin: 20px auto 0;
+	padding: clamp(20px, 4vw, 30px) clamp(20px, 4vw, 32px);
+	border: 1px solid rgba(31, 140, 96, 0.18);
+	background: rgba(255, 253, 242, 0.92);
+	border-radius: var(--radius);
+	box-shadow: var(--soft-shadow);
+	text-shadow: none;
+}
+
 /* lead paragraph under a section heading */
 .section-heading .lede {
-	max-width: 640px;
-	margin: 18px auto 0;
+	margin: 0;
 	color: var(--ink);
 	font-size: clamp(1.05rem, 1.7vw, 1.28rem);
 	font-weight: 700;
@@ -380,15 +392,12 @@ h3 {
 
 /* tongue-in-cheek fine print */
 .section-heading .disclaimer {
-	max-width: 600px;
-	margin: 16px auto 0;
+	margin: 14px 0 0;
 	color: var(--ink-soft);
-	font-size: 0.82rem;
+	font-size: clamp(0.95rem, 1.5vw, 1.1rem);
 	font-style: italic;
 	font-weight: 600;
 	line-height: 1.5;
-	opacity: 0.9;
-	text-shadow: 0 0 2px rgba(255, 255, 255, 0.9), 0 0 6px rgba(255, 255, 255, 0.75);
 }
 
 /* the trailer heading is the small rounded tagline */
