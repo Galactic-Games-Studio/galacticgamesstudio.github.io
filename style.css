@@ -406,6 +406,17 @@ h3 {
 	color: var(--ink-soft);
 }
 
+/* the dedication — a quieter, personal aside within the copy around it */
+.about-card .dedication {
+	margin: clamp(26px, 4vw, 38px) 0;
+	padding-left: clamp(16px, 3vw, 32px);
+	color: var(--ink-soft);
+	font-size: clamp(0.95rem, 1.25vw, 1.05rem);
+	font-style: italic;
+	font-weight: 600;
+	line-height: 1.7;
+}
+
 /* a little breathing room between the trailer and the wishlist panels */
 .wishlist {
 	padding-top: clamp(30px, 4.5vw, 56px);
